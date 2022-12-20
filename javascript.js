@@ -85,6 +85,9 @@ buttons.forEach((button) => {
                 alert('NICE TRY BUDDY. THAT DOESN\'T WORK');
                 clearCalc();
             }
+            else if(firstNum == '') {
+                return;
+            }
             else {
             secondNum = displayValue.textContent;
             result = operate(operator,firstNum,secondNum);
@@ -138,3 +141,13 @@ function clearCalc() {
     justSolved = false;
     justOperated = false;
 }
+
+function pressKey(e) {
+    const key = e.keyCode;
+    console.log(key);
+    if(document.querySelector(`button[data-key="${key}"]`) !== null) {
+    document.querySelector(`button[data-key="${key}"]`).click();
+    }
+}
+
+window.addEventListener('keydown',pressKey);

@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 body {
     display: flex;
@@ -13,7 +12,7 @@ body {
     margin-top: 75px;
     font-size: 52px;
     font-weight: 700;
-    font-family: 'Rubik Vinyl', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 .container {
@@ -114,5 +113,5 @@ button#delete:hover {
     font-weight: 800;
     padding: 8px;
     background: rgba(0,0,0,0);
-    font-family: 'Rubik Vinyl', cursive;
+    font-family: 'Indie Flower', cursive;
 }
