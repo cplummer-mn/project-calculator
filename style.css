@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+.header {
+    margin-top: 75px;
+    font-size: 52px;
+    font-weight: 700;
+    font-family: 'Rubik Vinyl', cursive;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 6px solid rgb(0, 0, 0);
+    height: 45em;
+    width: 30em;
+    margin-top: 100px;
+    padding: 8px;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: rgb(154, 160, 165);
+}
+
+.displayContainer {
+    width: 468px;
+    height: 6em;
+    border: 4px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin-top: 16px;
+    border-radius: 8px;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+#display {
+    margin: 6px;
+    font-size: 46px;
+    margin-right: 20px;
+}
+
+#displayTwo {
+    margin-top: 40px;
+    margin-right: 25px;
+    height: 15%;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+}
+
+.row.one {
+    align-items: flex-end;
+    
+}
+
+button {
+    width: 105px;
+    height: 105px;
+    font-size: 36px;
+    font-weight: bold;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgb(59, 59, 59);
+}
+
+button:hover {
+    background-color: #c4c4c4;
+}
+
+button#clear, #delete {
+    width: 226px;
+}
+
+button#clear {
+    background-color: rgb(181, 231, 240);
+}
+
+button#delete {
+    background-color: rgb(231, 182, 217);
+}
+
+button#clear:hover {
+    background-color: rgb(152, 192, 199);
+}
+
+button#delete:hover {
+    background-color: rgb(192, 147, 179);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 8px;
+    background: rgba(0,0,0,0);
+    font-family: 'Rubik Vinyl', cursive;
+}
