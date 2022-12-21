@@ -81,12 +81,20 @@ buttons.forEach((button) => {
             
         }
         else if(button.id == '=') {
-            if(operator == '/' && displayValue.textContent == 0) {
+            if(justOperated == true) {
+                return;
+            }
+            else if(operator == '/' && displayValue.textContent == 0) {
                 alert('NICE TRY BUDDY. THAT DOESN\'T WORK');
                 clearCalc();
             }
             else if(firstNum == '') {
                 return;
+            }
+            else if (justSolved == true) {
+                displayValueTwo.textContent = result + ' ' + operator + ' ' + secondNum + ' = ';
+                result = operate(operator,result,secondNum);
+                displayValue.textContent = result;
             }
             else {
             secondNum = displayValue.textContent;
