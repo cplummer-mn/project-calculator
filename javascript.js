@@ -48,6 +48,8 @@ displayValueTwo.textContent = '';
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
+        
+        // If /,*,- or + is pressed
         if(button.id == '/' || button.id == '*' || button.id == '-' || button.id == '+' ){
             if (justOperated) {
                 return;
@@ -80,6 +82,7 @@ buttons.forEach((button) => {
             }
             
         }
+        // If = is pressed
         else if(button.id == '=') {
             if(justOperated == true) {
                 return;
@@ -106,22 +109,29 @@ buttons.forEach((button) => {
             justOperated = false;
             }
         }
+        // If Clear is pressed
         else if(button.id == 'clear') {
             clearCalc();
         }
+        // If Delete is pressed
         else if (button.id == 'delete') {
             displayValue.textContent = displayValue.textContent.slice(0,-1);
             if(displayValue.textContent.length == 0) {
                 displayValue.textContent = 0;
             }
         }
+        // To replace the default 0 value of the text box
         else if(displayValue.textContent == '0' || waiting) {
             displayValue.textContent = button.id;
             waiting = false;
             justOperated = false;
         }
+        // If any other button is pressed
         else {
             if(displayValue.textContent.length > 9) {
+                return;
+            }
+            else if(button.id == '.' && displayValue.textContent.includes('.')) {
                 return;
             }
             else { 
