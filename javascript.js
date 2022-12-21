@@ -24,10 +24,10 @@ function operate(o,x,y) {
         return subtract(numOne,numTwo);
     }
     else if(o == '*') {
-        return multiply(numOne,numTwo);
+        return Math.round(((multiply(numOne,numTwo)) + Number.EPSILON) * 1000000) / 1000000;
     }
     else if(o == '/') {
-        return divide(numOne,numTwo);
+        return Math.round(((divide(numOne,numTwo)) + Number.EPSILON) * 1000000) / 1000000;
     }
 }
 
